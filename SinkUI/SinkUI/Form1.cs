@@ -24,21 +24,21 @@ namespace SinkUI
             {
                 ANumericUpDown.BackColor = Color.Salmon;
                 CNumericUpDown.BackColor = Color.Salmon;
-                errorList+="A-C>30 \n";
+                errorList+= "Разность длины мойки и длины чаши должна превышать 30 \n";
             }
 
             if ((BNumericUpDown.Value - 30) < ENumericUpDown.Value)
             {
                 BNumericUpDown.BackColor = Color.Salmon;
                 ENumericUpDown.BackColor = Color.Salmon;
-                errorList += "B-E>30 \n";
+                errorList += "Разность ширины мойки и ширины чаши должна превышать 30 \n";
             }
 
             if (D_NumericUpDown.Value < dNumericUpDown.Value)
             {
                 D_NumericUpDown.BackColor = Color.Salmon;
                 dNumericUpDown.BackColor = Color.Salmon;
-                errorList += "D>d \n";
+                errorList += "Диаметр отверстия для слива должен быть больше диаметра отверстия для крана \n";
             }
 
             if (errorList.Length != 0)
