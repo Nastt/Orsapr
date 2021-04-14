@@ -1,7 +1,7 @@
 ﻿
 namespace SinkUI
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -369,7 +369,7 @@ namespace SinkUI
             this.buildButton.UseVisualStyleBackColor = true;
             this.buildButton.Click += new System.EventHandler(this.buildButton_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -378,7 +378,7 @@ namespace SinkUI
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Sink3DPlugin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinkUI", "SinkUI\SinkUI.csproj", "{F4051FAC-8A54-4DD4-A4BB-45AED2B179AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SinkUI", "SinkUI\SinkUI.csproj", "{F4051FAC-8A54-4DD4-A4BB-45AED2B179AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sink", "..\Sink\Sink.csproj", "{C85B59F9-0FC2-461A-99DF-8A0E1DCB66DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F4051FAC-8A54-4DD4-A4BB-45AED2B179AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4051FAC-8A54-4DD4-A4BB-45AED2B179AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4051FAC-8A54-4DD4-A4BB-45AED2B179AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85B59F9-0FC2-461A-99DF-8A0E1DCB66DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85B59F9-0FC2-461A-99DF-8A0E1DCB66DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85B59F9-0FC2-461A-99DF-8A0E1DCB66DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85B59F9-0FC2-461A-99DF-8A0E1DCB66DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
