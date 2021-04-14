@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KompasConnector
+namespace Sink
 {
-    public class Class1
+    class KompasConnector
     {
     }
 }

@@ -7,17 +7,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sink;
 
 namespace SinkUI
 {
+    
     public partial class MainForm : Form
     {
+        private SinkParameters _sampleParameters;
         public MainForm()
         {
             InitializeComponent();
+            _sampleParameters = new SinkParameters();
         }
-     
+
         private void buildButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            
+
+               /* (double)SinkWidth.Value,
+                (double)SinkHeight.Value,
+                (double)CupSinkLength.Value,
+                (double)CupSinkWidth.Value,
+                (double)DrainHoleDiameter.Value,
+                (double)CraneHoleDiameter.Value)*/
+
+
+             
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Предупреждение",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+        }
+
+        /*private void buildButton_Click(object sender, EventArgs e)
         {
             string errorList = "";
             if ((ANumericUpDown.Value-30)<CNumericUpDown.Value)        
@@ -45,7 +74,7 @@ namespace SinkUI
             {
                 MessageBox.Show(errorList, "Данное условие не соблюдено:",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-        }
+        }*/
 
         private void CNumericUpDown_MouseClick(object sender, MouseEventArgs e)
         {
