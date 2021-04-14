@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KAPITypes;
+using Kompas6Constants;
+using Kompas6Constants3D;
+using Kompas6API5;
+using KompasAPI7;
 
 namespace SinkUI
 {

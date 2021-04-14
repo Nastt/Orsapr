@@ -6,4 +6,22 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="KAPITypes">
+      <HintPath>..\..\..\..\..\Desktop\Учеба 4 курс\Компас\Common\KAPITypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Kompas6API5">
+      <HintPath>..\..\..\..\..\Desktop\Учеба 4 курс\Компас\Common\Kompas6API5.dll</HintPath>
+    </Reference>
+    <Reference Include="Kompas6Constants">
+      <HintPath>..\..\..\..\..\Desktop\Учеба 4 курс\Компас\Common\Kompas6Constants.dll</HintPath>
+    </Reference>
+    <Reference Include="Kompas6Constants3D">
+      <HintPath>..\..\..\..\..\Desktop\Учеба 4 курс\Компас\Common\Kompas6Constants3D.dll</HintPath>
+    </Reference>
+    <Reference Include="KompasAPI7">
+      <HintPath>..\..\..\..\..\Desktop\Учеба 4 курс\Компас\Common\KompasAPI7.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
