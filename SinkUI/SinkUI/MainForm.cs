@@ -10,43 +10,37 @@ using System.Windows.Forms;
 using Sink;
 
 namespace SinkUI
-{
-    
+{    
     public partial class MainForm : Form
     {
-        private SinkParameters _sampleParameters;
+        private SinkParameter _sampleParameters;
         public MainForm()
         {
             InitializeComponent();
-            _sampleParameters = new SinkParameters();
         }
 
         private void buildButton_Click(object sender, EventArgs e)
         {
             try
             {
-            
-
-               /* (double)SinkWidth.Value,
-                (double)SinkHeight.Value,
-                (double)CupSinkLength.Value,
-                (double)CupSinkWidth.Value,
-                (double)DrainHoleDiameter.Value,
-                (double)CraneHoleDiameter.Value)*/
-
-
-             
+                _sampleParameters = new SinkParameter();
+                _sampleParameters.SinkLength = Convert.ToDouble(ANumericUpDown.Value);
+                _sampleParameters.SinkWidth = Convert.ToDouble(BNumericUpDown.Value);
+                _sampleParameters.SinkHeight = Convert.ToDouble(HNumericUpDown.Value);
+                _sampleParameters.CupSinkLength = Convert.ToDouble(CNumericUpDown.Value);
+                _sampleParameters.CupSinkWidth = Convert.ToDouble(ENumericUpDown.Value);
+                _sampleParameters.DrainHoleDiameter = Convert.ToDouble(D_NumericUpDown.Value);
+                _sampleParameters.CraneHoleDiameter = Convert.ToDouble(dNumericUpDown.Value);
             }
+
             catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Предупреждение",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            {              
+                MessageBox.Show(ex.Message);
                 return;
             }
-
         }
 
-        /*private void buildButton_Click(object sender, EventArgs e)
+       /*private void buildButton_Click(object sender, EventArgs e)
         {
             string errorList = "";
             if ((ANumericUpDown.Value-30)<CNumericUpDown.Value)        

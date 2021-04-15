@@ -10,7 +10,7 @@ namespace Sink
     /// <summary>
     /// Класс с параметрами
     /// </summary>
-    public class SinkParameters
+    public class SinkParameter
     {
         /// <summary>
         /// Длина мойки
