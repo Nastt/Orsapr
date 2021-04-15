@@ -56,6 +56,7 @@ namespace Sink
             {
                 return _sinkLength;
             }
+
             set
             {
                 if (value < 450 || value > 1200)
@@ -127,34 +128,6 @@ namespace Sink
         }
 
         /// <summary>
-        /// Диаметр отверстия для слива должен быть в диапазоне от 50 мм до 65 мм
-        /// </summary>
-        public double DrainHoleDiameter
-        {
-            get
-            {
-                return _drainHoleDiameter;
-            }
-            set
-            {
-                if (value < 50 || value > 65)
-                {
-                    throw new ArgumentException(" Диаметр отверстия для слива должен быть в диапазоне от 50 мм до 65 мм!");
-                }
-
-                else if (value < CraneHoleDiameter)
-                {
-                    throw new ArgumentException("Диаметр отверстия для слива не может может быть меньше диаметра отверстия для крана!");
-                }
-
-                else
-                {
-                    _drainHoleDiameter = value;
-                }
-            }
-        }
-
-        /// <summary>
         /// Диаметр отверстия для крана должен быть в диапазоне от 25 мм до 55 мм
         /// </summary>
         public double CraneHoleDiameter
@@ -183,6 +156,34 @@ namespace Sink
         }
 
         /// <summary>
+        /// Диаметр отверстия для слива должен быть в диапазоне от 50 мм до 65 мм
+        /// </summary>
+        public double DrainHoleDiameter
+        {
+            get
+            {
+                return _drainHoleDiameter;
+            }
+            set
+            {
+                if (value < 50 || value > 65)
+                {
+                    throw new ArgumentException(" Диаметр отверстия для слива должен быть в диапазоне от 50 мм до 65 мм!");
+                }
+
+                else if (value < CraneHoleDiameter)
+                {
+                    throw new ArgumentException("Диаметр отверстия для слива не может может быть меньше диаметра отверстия для крана!");
+                }
+
+                else
+                {
+                    _drainHoleDiameter = value;
+                }
+            }
+        }
+
+        /// <summary>
         /// Длина чаши мойки должна быть в диапазоне от 300 мм до 1150 мм
         /// </summary>
         public double CupSinkLength
@@ -198,7 +199,7 @@ namespace Sink
                     throw new ArgumentException("Длина чаши мойки должна быть в диапазоне от 300 мм до 1150 мм");
                 }
 
-                else if (value + 30 > CupSinkLength)
+                else if (value + 30 > SinkLength)
                 {
                     throw new ArgumentException("Разность длины мойки и длины чаши мойки должна превышать 30");
                 }
@@ -226,7 +227,7 @@ namespace Sink
                     throw new ArgumentException("Ширина чаши мойки должна быть в диапазоне от 300 мм до 650 мм");
                 }
 
-                else if (value + 30 > CupSinkWidth)
+                else if (value + 30 > SinkWidth)
                 {
                     throw new ArgumentException("Разность ширины мойки и ширины чаши должна превышать 30");
                 }
