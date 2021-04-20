@@ -382,7 +382,5 @@ namespace SinkParameters.UnitTests
                 }
             );
         }
-
-
     }
 }
