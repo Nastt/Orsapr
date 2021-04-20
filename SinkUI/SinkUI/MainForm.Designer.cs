@@ -44,7 +44,6 @@ namespace SinkUI
             this.label8 = new System.Windows.Forms.Label();
             this.CNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.dNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@ namespace SinkUI
             ((System.ComponentModel.ISupportInitialize)(this.ENumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.D_NumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -278,7 +276,6 @@ namespace SinkUI
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.numericUpDown1);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.dNumericUpDown);
             this.panel3.Controls.Add(this.label11);
@@ -288,13 +285,6 @@ namespace SinkUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(411, 86);
             this.panel3.TabIndex = 8;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(311, 2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDown1.TabIndex = 5;
             // 
             // label5
             // 
@@ -379,7 +369,7 @@ namespace SinkUI
             this.buildButton.UseVisualStyleBackColor = true;
             this.buildButton.Click += new System.EventHandler(this.buildButton_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -388,7 +378,7 @@ namespace SinkUI
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Sink3DPlugin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -401,7 +391,6 @@ namespace SinkUI
             ((System.ComponentModel.ISupportInitialize)(this.CNumericUpDown)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D_NumericUpDown)).EndInit();
             this.ResumeLayout(false);
@@ -431,7 +420,6 @@ namespace SinkUI
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.NumericUpDown D_NumericUpDown;
         private System.Windows.Forms.Button buildButton;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
