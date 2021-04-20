@@ -8,7 +8,7 @@ namespace SinkParameters.UnitTests
     public class SinkParametersTest
     {
         [Test]
-        public void SinkLenght_CorrectValue_ReturnCorrectValue()
+        public void SinkLength_CorrectValue_ReturnCorrectValue()
         {
             //Setup
             var parameter = new SinkParameter();
@@ -24,7 +24,7 @@ namespace SinkParameters.UnitTests
         }
 
         [Test]
-        public void SinkLenght_OutOfRangeValue_ThrowsException()
+        public void SinkLength_OutOfRangeValue_ThrowsException()
         {
             //Setup
             var parameter = new SinkParameter();
@@ -42,7 +42,7 @@ namespace SinkParameters.UnitTests
         }
 
         [Test]
-        public void SinkLenght_IncorrectValue_ThrowsException()
+        public void SinkLength_IncorrectValue_ThrowsException()
         {
             //Setup
             var parameter = new SinkParameter
@@ -122,6 +122,120 @@ namespace SinkParameters.UnitTests
         }
 
         [Test]
+        public void CupSinkLength_CorrectValue_ReturnCorrectValue()
+        {
+            //Setup
+            var parameter = new SinkParameter();
+            var sourceValue = 490.00;
+            var expectedValue = sourceValue;
+
+            //Act
+            parameter.CupSinkLength = sourceValue;
+            var actualValue = parameter.CupSinkLength;
+
+            //Assert
+            NUnit.Framework.Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void CupSinkLength_OutOfRangeValue_ThrowsException()
+        {
+            //Setup
+            var parameter = new SinkParameter();
+            var sourceValue = 100.00;
+
+            //Act
+            NUnit.Framework.Assert.Throws<ArgumentException>
+            (
+                () =>
+                {
+                    //Act
+                    parameter.CupSinkLength = sourceValue;
+                }
+            );
+        }
+
+        [Test]
+        public void CupSinkLength_IncorrectValue_ThrowsException()
+        {
+            //Setup
+            var parameter = new SinkParameter
+            {
+                SinkLength = 490.00,
+                CupSinkLength = 440.00,
+            };
+
+            var sourceValue = 480.00;
+
+            //Act
+            NUnit.Framework.Assert.Throws<ArgumentException>
+            (
+                () =>
+                {
+                    //Act
+                    parameter.CupSinkLength = sourceValue;
+                }
+            );
+        }
+
+        [Test]
+        public void CupSinkWidth_CorrectValue_ReturnCorrectValue()
+        {
+            //Setup
+            var parameter = new SinkParameter();
+            var sourceValue = 500.00;
+            var expectedValue = sourceValue;
+
+            //Act
+            parameter.CupSinkWidth = sourceValue;
+            var actualValue = parameter.CupSinkWidth;
+
+            //Assert
+            NUnit.Framework.Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void CupSinkWidth_OutOfRangeValue_ThrowsException()
+        {
+            //Setup
+            var parameter = new SinkParameter();
+            var sourceValue = 200.00;
+
+            //Act
+            NUnit.Framework.Assert.Throws<ArgumentException>
+            (
+                () =>
+                {
+                    //Act
+                    parameter.CupSinkWidth = sourceValue;
+                }
+            );
+        }
+
+        [Test]
+        public void CupSinkWidth_IncorrectValue_ThrowsException()
+        {
+            //Setup
+            var parameter = new SinkParameter
+            {
+                SinkWidth = 490.00,
+                CupSinkWidth = 440.00,
+            };
+
+            var sourceValue = 480.00;
+
+            //Act
+            NUnit.Framework.Assert.Throws<ArgumentException>
+            (
+                () =>
+                {
+                    //Act
+                    parameter.CupSinkWidth = sourceValue;
+                }
+            );
+        }
+
+        [Test]
         public void SinkHeight_CorrectValue_ReturnCorrectValue()
         {
             //Setup
@@ -156,68 +270,11 @@ namespace SinkParameters.UnitTests
         }
 
         [Test]
-        public void DrainHoleDiameter_CorrectValue_ReturnCorrectValue()
-        {
-            //Setup
-            var parameter = new SinkParameter();
-            var sourceValue = 60.00;
-            var expectedValue = sourceValue;
-
-            //Act
-            parameter.DrainHoleDiameter = sourceValue;
-            var actualValue = parameter.DrainHoleDiameter;
-
-            //Assert
-            NUnit.Framework.Assert.AreEqual(expectedValue, actualValue);
-        }
-
-        [Test]
-        public void DrainHoleDiameter_OutOfRangeValue_ThrowsException()
-        {
-            //Setup
-            var parameter = new SinkParameter();
-            var sourceValue = 100.00;
-
-            //Act
-            NUnit.Framework.Assert.Throws<ArgumentException>
-            (
-                () =>
-                {
-                    //Act
-                    parameter.DrainHoleDiameter = sourceValue;
-                }
-            );
-        }
-
-        [Test]
-        public void DrainHoleDiameter_IncorrectValue_ThrowsException()
-        {
-            //Setup
-            var parameter = new SinkParameter
-            {
-                DrainHoleDiameter = 50.00,
-                CraneHoleDiameter = 40.00,
-            };
-
-            var sourceValue = 54.00;
-
-            //Act
-            NUnit.Framework.Assert.Throws<ArgumentException>
-            (
-                () =>
-                {
-                    //Act
-                    parameter.DrainHoleDiameter = sourceValue;
-                }
-            );
-        }
-
-        [Test]
         public void CraneHoleDiameter_CorrectValue_ReturnCorrectValue()
         {
             //Setup
             var parameter = new SinkParameter();
-            var sourceValue = 40.00;
+            var sourceValue = 54.00;
             var expectedValue = sourceValue;
 
             //Act
@@ -252,7 +309,7 @@ namespace SinkParameters.UnitTests
             //Setup
             var parameter = new SinkParameter
             {
-                DrainHoleDiameter = 60.00,
+                DrainHoleDiameter = 50.00,
                 CraneHoleDiameter = 40.00,
             };
 
@@ -268,5 +325,64 @@ namespace SinkParameters.UnitTests
                 }
             );
         }
+
+        [Test]
+        public void DrainHoleDiameter_CorrectValue_ReturnCorrectValue()
+        {
+            //Setup
+            var parameter = new SinkParameter();
+            var sourceValue = 50.00;
+            var expectedValue = sourceValue;
+
+            //Act
+            parameter.DrainHoleDiameter = sourceValue;
+            var actualValue = parameter.DrainHoleDiameter;
+
+            //Assert
+            NUnit.Framework.Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void DrainHoleDiameter_OutOfRangeValue_ThrowsException()
+        {
+            //Setup
+            var parameter = new SinkParameter();
+            var sourceValue = 100.00;
+
+            //Act
+            NUnit.Framework.Assert.Throws<ArgumentException>
+            (
+                () =>
+                {
+                    //Act
+                    parameter.DrainHoleDiameter = sourceValue;
+                }
+            );
+        }
+
+        [Test]
+        public void DrainHoleDiameter_IncorrectValue_ThrowsException()
+        {
+            //Setup
+            var parameter = new SinkParameter
+            {
+                DrainHoleDiameter = 60.00,
+                CraneHoleDiameter = 54.00,
+            };
+
+            var sourceValue = 52.00;
+
+            //Act
+            NUnit.Framework.Assert.Throws<ArgumentException>
+            (
+                () =>
+                {
+                    //Act
+                    parameter.DrainHoleDiameter = sourceValue;
+                }
+            );
+        }
+
+
     }
 }
