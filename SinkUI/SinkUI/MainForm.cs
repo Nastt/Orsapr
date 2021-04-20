@@ -47,7 +47,7 @@ namespace SinkUI
                 MessageBox.Show(errorList, "Данное условие не соблюдено:",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-
+        
         private void CNumericUpDown_MouseClick(object sender, MouseEventArgs e)
         {
             CNumericUpDown.BackColor = Color.White;
