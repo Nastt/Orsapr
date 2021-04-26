@@ -49,11 +49,10 @@ namespace SinkUI
             catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message);
-                return;
             }
         }
 
-        /*private void buildButton_Click(object sender, EventArgs e)
+        private void buildButton_Click(object sender, EventArgs e)
          {
              string errorList = "";
              if ((ANumericUpDown.Value-30)<CNumericUpDown.Value)        
@@ -78,7 +77,7 @@ namespace SinkUI
              {
                  MessageBox.Show(errorList, "Данное условие не соблюдено:",MessageBoxButtons.OK,MessageBoxIcon.Error);
              }
-         }*/
+         }
 
         private void CNumericUpDown_MouseClick(object sender, MouseEventArgs e)
         {
