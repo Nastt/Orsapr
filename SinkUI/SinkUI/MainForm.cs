@@ -31,7 +31,7 @@ namespace SinkUI
         private void buildButton_Click(object sender, EventArgs e)
         {
             _kompasWrapper.OpenKOMPAS();
-            _kompasWrapper.BuildObject(_sampleParameters);
+            _kompasWrapper.BuildSink(_sampleParameters);
             try
             {
 
